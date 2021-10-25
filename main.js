@@ -4,6 +4,7 @@ console.log('script ')
 console.log('-------------------------------')
 console.log('')
 
+const { VK, Keyboard } = require('vk-io');
 const vk = new VK();
 const commands = [];
 const request = require('prequest');
