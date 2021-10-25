@@ -10,7 +10,7 @@ const commands = [];
 const request = require('prequest');
 let user = new VK(); 
 user.setOptions({ 
-token: '89b0757d99721e75672be648f9bf7ca01f015b8a418f43ec09742d938dd5f0898' 
+token: '74a8ef0646bdaad5c464dc69fed45bbae4286e55cfe0d390e773b57fed4db5bcd9fae1bf4e1b0d0d3420a' 
 }); 
 
 const https = require('https'); 
@@ -781,13 +781,13 @@ clearMsg();
 async function saveAll()
 {
 	require('fs').writeFileSync('./database/clans.json', JSON.stringify(clans, null, '\t'));
-	require('fs').writeFileSync("./database/botinfo.json", JSON.stringify(botinfo, null, "\t"));
+	require('fs').writeFileSync("./database/botinfo.j son", JSON.stringify(botinfo, null, "\t"));
 	require('fs').writeFileSync("./database/settings.json", JSON.stringify(config, null, "\t"));
 	require('fs').writeFileSync('./database/users.json', JSON.stringify(users, null, '\t'));
 	return true;
 }
 
-vk.setOptions({ token: '2b4918c44f8fd503258e963a2b5004dd41508e5e3cc27e63ef56b219ab95adcefe5bca5812e73d39086fd', pollingGroupId: 197675118 });
+vk.setOptions({ token: '7faf702d1473bf392f2f5c0cc2cefba8e0dd74da11b49bb2d4154730f67da84e87cd03e3249e9a308c4e3', pollingGroupId: 197675118 });
 const { updates, snippets } = vk;
 
 updates.startPolling();
@@ -9999,7 +9999,7 @@ tops.sort(function(a, b) {if (b.lvl > a.lvl) return 1; if (b.lvl < a.lvl) return
 
 let script = {title: '🔥 Лучшие игроки', title_url: "vk.com/botpineapple", head: [{text: 'Игровое имя'}, {text: 'Рейтинг', align: 'right'}, {text: 'Баланс', align: 'right'}], body: [], more: "🔥 Начать играть", more_url: "https://vk.com/im?media=&sel=-197675118"} 
 for (let g = 0; g < 10; g++) {if (tops.length > g){script.body.push([{icon_id: `id${tops[g].idvk}`, text: `${users[tops[g].id].tag}`, url: `vk.com/id${tops[g].idvk}`}, {text: `${utils.sp(tops[g].lvl)}👑`}, {text: `${utils.rn(users[tops[g].id].balance)}$`}])}} 
-requests.post({url: 'https://api.vk.com/method/appWidgets.update', form: {type: 'table', access_token: '10b0eba7109c11b9d799ef7503bfa142e5d6626173c09d33f191db99eec5078e5e15f658000d6651edf10', code: `return ${JSON.stringify(script)};`, v: '5.95'}}, 
+requests.post({url: 'https://api.vk.com/method/appWidgets.update', form: {type: 'table', access_]: '10b0eba7109c11b9d799ef7503bfa142e5d6626173c09d33f191db99eec5078e5e15f658000d6651edf10', code: `return ${JSON.stringify(script)};`, v: '5.95'}}, 
 function(err, resp, body) {console.log(body)}) 
 console.log("Виджет обновлён!") 
 } 
